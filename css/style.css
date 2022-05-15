@@ -1,0 +1,129 @@
+body {
+    background-color: rgba(0,0,255,0.5);
+    font-family: Verdana;
+    text-align: center;
+    color:#fff;
+  max-width:100vw;
+}
+
+form {
+  z-index:100;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1));
+     backdrop-filter: blur(50px);
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-control {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 95%;
+}
+
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+
+button {
+    background-color: rgba(0, 0, 255, 0.5);
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 21px;
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 10px 0px;
+}
+
+button:hover{
+    transition: all 1s ease-in-out;
+    background-color: rgba(0,255,0);
+    color: black;
+}
+
+.cont1{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  /* width: 80vw; */
+}
+.c{
+  background-color:#fff;
+}
+.c1{
+  height:200px;
+  width:200px;
+  margin-bottom:-40vh;
+  margin-right:-800px ;
+  position:relative;
+  animation: mov2 10s infinite;
+}
+#c1{
+  animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.c2{
+  height:300px;
+  width:300px;
+  border-radius:50%;
+  margin-left:-800px ;
+  margin-top:-60vh;
+  position:relative;
+  animation: mov1 10s infinite;
+}
+#c2{
+  animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+} 
+@keyframes mov1{
+  from {right: 0px;
+    background-color: rgb(0, 255, 106);
+    border-radius:0%;}
+  to {right: 550px;
+    background-color: rgb(255, 255, 255);
+    border-radius:50%;}
+}
+@keyframes mov2{
+  from{left:0px;
+    background-color: rgb(0, 255, 106);
+    border-radius:0%;}
+  to{left:450px;
+  background-color: rgb(255, 255, 255);
+  border-radius:50%;}
+};
+
+@media(min-width:880px) {
+  @keyframes mov1{
+    from {right: 0px;}
+    to {right: 90px;
+  }
+  }
+  @keyframes mov2{
+    from{left:0px}
+    to{left:90px;}
+  };
+  form {
+    width:auto;
+  }
+}
